@@ -23,7 +23,7 @@
     :maintainer "Kevin M. Rosenberg <kmr@debian.org>"
     :licence "BSD"
 
-    :components 
+    :components
     ((:file "package")
      (:file "main" :depends-on ("package"))))
 
@@ -39,6 +39,6 @@
 
 (defmethod perform ((o test-op) (c (eql (find-system 'getopt-tests))))
   (or (funcall (intern (symbol-name '#:do-tests)
-		       (find-package '#:getopt-tests)))
+           (find-package '#:getopt-tests)))
       (error "test-op failed")))
 
